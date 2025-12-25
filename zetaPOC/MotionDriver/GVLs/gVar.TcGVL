@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <GVL Name="gVar" Id="{08f54d8e-0c33-4fd2-9ae9-c2b1bfd08b30}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	gAxis1 : AXIS_REF; // Axis reference linked to Motion Axis 1
+	
+    // Inputs from drive (monitoring)
+    gStatusWord     : UINT;
+    gPosAct         : DINT;
+    gVelAct         : DINT;
+    gModeDisp       : SINT;
+
+    // Outputs to drive (use with care - see note below)
+    gControlWord    : UINT;
+    gTargetPos      : DINT;
+    gTargetVel      : DINT;
+    gModeCmd        : SINT;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

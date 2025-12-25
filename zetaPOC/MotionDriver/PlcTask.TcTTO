@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <Task Name="PlcTask" Id="{50d6d7fe-c8c5-4bf7-96b0-b4c691edf5a6}">
+    <!--CycleTime in micro seconds.-->
+    <CycleTime>1000</CycleTime>
+    <Priority>20</Priority>
+    <PouCall>
+      <Name>AxisDriver</Name>
+    </PouCall>
+    <TaskFBGuid>{a5b160c3-fd82-4f81-87d8-72b1bbba9c80}</TaskFBGuid>
+    <Fb_init>{7aa60d91-96dc-4287-8c65-116d12d9c5bc}</Fb_init>
+    <Fb_exit>{9364606e-3f29-4398-9068-7108c96f4092}</Fb_exit>
+    <CycleUpdate>{715068cd-45e0-4de6-bd5e-c92d9fa021ec}</CycleUpdate>
+    <PostCycleUpdate>{1eeb2198-1a18-44d3-b99d-cda827d92db2}</PostCycleUpdate>
+  </Task>
+</TcPlcObject>

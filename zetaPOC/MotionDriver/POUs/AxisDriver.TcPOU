@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="AxisDriver" Id="{f302b0f2-58bd-44a5-8d1d-ac1788493a50}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM AxisDriver
+VAR
+    fbReset : MC_Reset;  // PLCopen reset
+    fbPower : MC_Power;  // PLCopen enable power
+    bEnable : BOOL := TRUE;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Reset faults
+fbReset(
+    Axis := gVar.gAxis1,
+    Execute := bEnable
+);
+
+// Enable drive
+fbPower(
+    Axis := gVar.gAxis1,
+    Enable := bEnable,
+    Enable_Positive := TRUE,
+    Enable_Negative := TRUE
+);
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
